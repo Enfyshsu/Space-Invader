@@ -88,11 +88,11 @@
 **ShowExplosion**			; 顯示爆炸畫面  
 **ClearExplosion**			; 清除舊爆炸畫面  
 
-**產生爆炸 ShowExplosion**
+**產生爆炸 ShowExplosion**  
 判斷explosionFlag是否為0，若為0則ret 不爆炸，若為1則顯示爆炸。  
 用SetTextColor設定爆炸顏色，接著利用子彈的座標(BulletX和BulletY)去設定相對應的爆炸四個方形的位置(ah和al)	，並且將爆炸位置記錄在particleX和particleY供之後的clearExplosion使用，最後利用WriteString印出來，最後將子彈位置重設並改變怪獸顏色。
 
-**清除爆炸 ClearExplosion**
+**清除爆炸 ClearExplosion**  
 在showScore擊中怪獸得分時，會將explosionFlag設為2。  
 在clearExplosion，我們會先比較explosionFlag是否為2，如果不是，代表怪獸沒有被消除，不須產生爆炸。接著將顏色設為背景顏色，然後利用particleX和particleY將之前產生的爆炸蓋過去，最後把explosionFlag重設為0。
 
